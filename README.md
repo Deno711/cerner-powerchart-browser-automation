@@ -253,6 +253,35 @@ await withAnchorBrowser(async (page) => {
 
 ---
 
+## Known Selectors Reference
+
+> These CSS selectors were observed in Cerner PowerChart web interfaces. Enterprise applications update their UIs — verify against your specific instance and submit PRs when selectors break.
+
+| Element | Selector | Notes |
+|---------|----------|-------|
+| Login: username | `#j_username` | Login form |
+| Login: password | `#j_password` | Login form |
+| Login: submit | `.btn-login` | Login form |
+| Login: mfa code | `input[name="passcode"]` | Login form |
+| search patient: search input | `#patSearch` | |
+| search patient: result item | `.pt-info-name` | |
+| search patient: open chart | `.open-chart-btn` | |
+| view results: results nav | `a[href*="results"]` | |
+| view results: result row | `.result-row` | |
+| view results: result value | `.result-value` | |
+| view results: expand row | `.expand-result` | |
+| create order: order search | `#orderSearch` | |
+| create order: order suggestion | `.order-suggestion` | |
+| create order: sign btn | `#signOrderBtn` | |
+| create order: priority select | `select[name="priority"]` | |
+| export documentation: doc menu | `a[href*="documentation"]` | |
+| export documentation: note list | `.documentation-list` | |
+| export documentation: export btn | `.export-btn` | |
+
+> ⚠️ Selectors are best-effort. Run `node src/utils.js --verify-selectors` to test against your instance.
+
+---
+
 ## More Browser Automation Projects
 
 This is part of the **[Browser Automation Hub](https://github.com/Browser-Automation-Hub)** — a collection of open-source browser automation scaffolds for systems with poor or no API support:
